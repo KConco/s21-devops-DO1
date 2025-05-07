@@ -1,6 +1,9 @@
 ## Part 1. Установка ОС
 - Вывод команды `cat /etc/issue` : ![pt1screen](./screenshots/pt1.png)
 ## Part 2. Создание пользователя
+- Создаём нового пользователся `studentname` командой `adduser` : ![pt1screen](./screenshots/pt2s1.png)
+- Добавляем нового пользователся в группу `adm` командой `usermod` : ![pt1screen](./screenshots/pt2s2.png)
+- Вывод команды `cat /etc/passwd`: ![pt1screen](./screenshots/pt2s3.png)
 
 ## Part 3. Настройка сети ОС
 ## Part 4. Обновление ОС
