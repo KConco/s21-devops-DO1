@@ -184,9 +184,20 @@ network:
 
 - Вывод команды `sudo du -sh /var/log/*`, показывающией размер содержимого `/var/log`  ![pt1screen](./screenshots/pt12s3.png)
 
-
-
-
 ## Part 13. Установка и использование утилиты ncdu
+
+- `sudo ncdu /home`![pt1screen](./screenshots/pt13s1.png)
+- `sudo ncdu /var` ![pt1screen](./screenshots/pt13s2.png)
+- `sudo ncdu /var/log` ![pt1screen](./screenshots/pt13s3.png)
+
 ## Part 14. Работа с системными журналами
+
+- строка из вывода команды `less /var/log/auth.log`, сообщающая об авторизации пользователя *conco 23 мая в 15:49:19*, метод входа *password* ![pt1screen](./screenshots/pt14s1.png)
+
+- фрагмент вывода лога `var/log/syslog` ![pt1screen](./screenshots/pt14s2.png)
+
 ## Part 15. Использование планировщика заданий CRON
+
+- фрагмент вывода лога `var/log/syslog`, а также записи во временный файл ![pt1screen](./screenshots/pt15s1.png)
+- задания CRON `crontab -l` до очистки ![pt1screen](./screenshots/pt15s2.png)
+- сообщение об остутствии crontab после очистки ![pt1screen](./screenshots/pt15s3.png)
