@@ -1,17 +1,24 @@
 ## Part 1. Установка ОС
-- Вывод команды `cat /etc/issue`: ![pt1screen](./screenshots/pt1.png)
+- Вывод команды `cat /etc/issue`: <br>
+![pt1screen](./screenshots/pt1.png)
 
 ## Part 2. Создание пользователя
-- Создаём нового пользователся `studentname` командой `adduser`: ![pt1screen](./screenshots/pt2s1.png)
-- Добавляем нового пользователся в группу `adm` командой `usermod`: ![pt1screen](./screenshots/pt2s2.png)
-- Вывод команды `cat /etc/passwd`: ![pt1screen](./screenshots/pt2s3.png)
+- Создаём нового пользователся `studentname` командой `adduser`: <br>
+![pt1screen](./screenshots/pt2s1.png)
+- Добавляем нового пользователся в группу `adm` командой `usermod`: <br>
+![pt1screen](./screenshots/pt2s2.png)
+- Вывод команды `cat /etc/passwd`: <br>
+![pt1screen](./screenshots/pt2s3.png)
 
 ## Part 3. Настройка сети ОС
-- Вывод сетевых интерфейсов командой `ip link show`: ![pt1screen](./screenshots/pt3s1.png)
+- Вывод сетевых интерфейсов командой `ip link show`: <br>
+![pt1screen](./screenshots/pt3s1.png) <br>
 Интерфейс `lo` (**loopback** или *локальный интерфейс*) используется для связи устройства с самим собой и присутствует во всех современных ОС по умолчанию.
-- Вывод сетевых интерфейсов командой `ip a`. Адрес `10.0.2.15/24` получен от DHCP-сервера: ![pt1screen](./screenshots/pt3s2.png)
+- Вывод сетевых интерфейсов командой `ip a`. Адрес `10.0.2.15/24` получен от DHCP-сервера: <br>
+ ![pt1screen](./screenshots/pt3s2.png) <br>
 **DHCP** (Dynamic Host Configuration Protocol Протокол динамической настройки узла) - это протокол, в соответствии с которым устройствам в сети автоматически выдаются IP-адреса и другая сетевая информация.
-- Пинг по адресам `1.1.1.1` и `ya.ru`: ![pt1screen](./screenshots/pt3s3.png)
+- Пинг по адресам `1.1.1.1` и `ya.ru`: <br>
+ ![pt1screen](./screenshots/pt3s3.png)
 
 1. Для измненеия названия машины редактировал hostname `sudo nano /etc/hostname` с последующей перезагрузкой.
 2. Для установления временной зоны `sudo timedatectl set-timezone Europe/Moscow`.
@@ -35,12 +42,15 @@ network:
 7. Перезагрузил `sudo reboot` и снова открыл файл
 
 ## Part 4. Обновление ОС
-- Обновил систему командами `sudo apt update && sudo apt upgrade` ![pt1screen](./screenshots/pt4.png)
+- Обновил систему командами `sudo apt update && sudo apt upgrade` <br>
+![pt1screen](./screenshots/pt4.png)
 ## Part 5. Использование команды sudo
 - **sudo** (от **S**ubstitute **U**ser and **do**, ) — это команда, позволяющая обычному пользователю временно выполнять команды от имени администратора (root). Она защищает систему от случайных или вредоносных действий и позволяет контролировать, кто и что может выполнять.
-- Изменил *hostname* от пользоветаеля **studentname**, которому добавлена возможность использовать команду `sudo` ![pt1screen](./screenshots/pt5.png)
+- Изменил *hostname* от пользоветаеля **studentname**, которому добавлена возможность использовать команду `sudo` <br>
+![pt1screen](./screenshots/pt5.png)
 ## Part 6. Установка и настройка службы времени
-- Вывод команды `timeditectl show` ![pt1screen](./screenshots/pt6.png) для включения автоматической синхронизации времени использовал команду `sudo timedatectl set-ntp true`
+- Вывод команды `timeditectl show` <br>
+![pt1screen](./screenshots/pt6.png) <br> для включения автоматической синхронизации времени использовал команду `sudo timedatectl set-ntp true`
 ## Part 7. Установка и использование текстовых редакторов
 - **vim** и **nano** уже установлены "из коробки", поэтому установим **neovim** `sudo apt install neovim`
 ### Создание файлов и сохранение
@@ -105,16 +115,22 @@ network:
 ### Поиск и замена
 
 --**nano**--
-- Для поиска фрагменат **Ctrl** + **W** ![pt1screen](./screenshots/pt7nano3.png)
-- Для замены **Ctrl** + **/** ![pt1screen](./screenshots/pt7nano4.png)
+- Для поиска фрагменат **Ctrl** + **W** <br>
+![pt1screen](./screenshots/pt7nano3.png)
+- Для замены **Ctrl** + **/** <br>
+![pt1screen](./screenshots/pt7nano4.png)
 
 --**vim**--
-- Для поиска фрагменат "/" в командном режиме ![pt1screen](./screenshots/pt7vim3.png)
-- Для замены ":%s:/School/University/g" ![pt1screen](./screenshots/pt7vim4.png)
+- Для поиска фрагменат "/" в командном режиме <br>
+![pt1screen](./screenshots/pt7vim3.png)
+- Для замены ":%s:/School/University/g" <br>
+![pt1screen](./screenshots/pt7vim4.png)
 
 --**nvim**-- *Аналогично с vim:*
-- Для поиска фрагменат "/" в командном режиме ![pt1screen](./screenshots/pt7nvim3.png)
-- Для замены ":%s:/School/University/g" ![pt1screen](./screenshots/pt7nvim4.png)
+- Для поиска фрагменат "/" в командном режиме <br>
+![pt1screen](./screenshots/pt7nvim3.png)
+- Для замены ":%s:/School/University/g" <br>
+![pt1screen](./screenshots/pt7nvim4.png)
 
 ## Part 8. Установка и базовая настройка сервиса SSHD
 1. Установить службу SSHd командой `sudo apt install openssh-server`
@@ -124,7 +140,7 @@ network:
 4. Для вывода процесса можно использовать `ps -ef`, где ключ **e** используется для вывода всех процессов, а **f** для расширения формата выводимой информации (+ UID, PID, PPID, CMD). Для удобства можно грепнуть `ps -ef | grep sshd`
 5. `sudo reboot` для перезагрузки виртуальной машины
 
-- ![pt1screen](./screenshots/pt8.png)
+- ![pt1screen](./screenshots/pt8.png) <br>
 **Значение ключей -tan**: <br>`-t` показать только TCP-соединения, <br>`-a` показать все подключения (и прослушивание, и установленные)<br> `-n` показать IP-адреса и номера портов в числовом виде, без DNS-имен <br>
 **Значение каждого столбца вывода**:
 ***Proto*** - протокол соединения  <br>
@@ -145,17 +161,24 @@ network:
   - pid процесса занимающего больше всего памяти - PID 1 с 0.6%,
   - pid процесса, занимающего больше всего процессорного времени PID 1 с 00:00.74.
 
-- скрин с выводом команды htop отсортированному по PID ![pt1screen](./screenshots/pt9pid.png)
-- скрин с выводом команды htop отсортированному по PERCENT_CPU ![pt1screen](./screenshots/pt9percentcpu.png)
-- скрин с выводом команды htop отсортированному по PERCENT_MEM ![pt1screen](./screenshots/pt9percentmem.png)
-- скрин с выводом команды htop отсортированному по TIME ![pt1screen](./screenshots/pt9time.png)
-- отфильтрованный для процесса *sshd* ![pt1screen](./screenshots/pt9filter.png)
-- **syslog** найденый через поиск ![pt1screen](./screenshots/pt9syslog.png)
-- добавлены ***hostname, clock, uptime*** ![pt1screen](./screenshots/pt9info.png)
+- скрин с выводом команды htop отсортированному по PID <br>
+![pt1screen](./screenshots/pt9pid.png)
+- скрин с выводом команды htop отсортированному по PERCENT_CPU <br>
+![pt1screen](./screenshots/pt9percentcpu.png)
+- скрин с выводом команды htop отсортированному по PERCENT_MEM <br>
+![pt1screen](./screenshots/pt9percentmem.png)
+- скрин с выводом команды htop отсортированному по TIME <br>
+![pt1screen](./screenshots/pt9time.png)
+- отфильтрованный для процесса *sshd* <br>
+![pt1screen](./screenshots/pt9filter.png)
+- **syslog** найденый через поиск <br>
+![pt1screen](./screenshots/pt9syslog.png)
+- добавлены ***hostname, clock, uptime*** <br>
+![pt1screen](./screenshots/pt9info.png)
 
 ## Part 10. Использование утилиты fdisk
 
-- ![pt1screen](./screenshots/pt10.png)
+- ![pt1screen](./screenshots/pt10.png) <br>
 ***название жесткого диска***: /dev/sda/ls  <br>
 ***размер жесткого диска***: 10.5 Гибибайт <br>
 ***количество секторов***: 21074272 <br>
@@ -163,14 +186,14 @@ network:
 
 ## Part 11. Использование утилиты df
 
-- Вывод команды `df /`![pt1screen](./screenshots/pt11s0.png)
+- Вывод команды `df /`: <br> ![pt1screen](./screenshots/pt11s0.png) <br>
 **Размер раздела**: 8456888 <br>
 **Занято**: 4779920 <br>
 **Свободно**: 32257796 <br>
 **Процент использования**: 60%  <br>
 В выводе используются килобайты
 
-- Вывод команды `df -h /`![pt1screen](./screenshots/pt11.png)
+- Вывод команды `df -h /`: <br> ![pt1screen](./screenshots/pt11.png) <br>
 **Размер раздела**: 8.1 G <br>
 **Занято**: 4.6 G <br>
 **Свободно**: 3.1 G <br>
@@ -178,26 +201,30 @@ network:
 В выводе используются гигабайты
 
 ## Part 12. Использование утилиты du
-- Вывод команды `sudo du -sb /home /var /var/log`, показывающией размер папок в байтах ![pt1screen](./screenshots/pt12s1.png)
+- Вывод команды `sudo du -sb /home /var /var/log`, показывающией размер папок в байтах <br>
+ ![pt1screen](./screenshots/pt12s1.png)
 
-- Вывод команды `sudo du -sh /home /var /var/log`, показывающией размер папок в человекочитаемом формате ![pt1screen](./screenshots/pt12s2.png)
+- Вывод команды `sudo du -sh /home /var /var/log`, показывающией размер папок в человекочитаемом формате <br>
+ ![pt1screen](./screenshots/pt12s2.png)
 
-- Вывод команды `sudo du -sh /var/log/*`, показывающией размер содержимого `/var/log`  ![pt1screen](./screenshots/pt12s3.png)
+- Вывод команды `sudo du -sh /var/log/*`, показывающией размер содержимого `/var/log`  <br>
+ ![pt1screen](./screenshots/pt12s3.png)
 
 ## Part 13. Установка и использование утилиты ncdu
 
-- `sudo ncdu /home`![pt1screen](./screenshots/pt13s1.png)
-- `sudo ncdu /var` ![pt1screen](./screenshots/pt13s2.png)
-- `sudo ncdu /var/log` ![pt1screen](./screenshots/pt13s3.png)
+- `sudo ncdu /home` <br> ![pt1screen](./screenshots/pt13s1.png)
+- `sudo ncdu /var` <br> ![pt1screen](./screenshots/pt13s2.png)
+- `sudo ncdu /var/log` <br> ![pt1screen](./screenshots/pt13s3.png)
 
 ## Part 14. Работа с системными журналами
 
-- строка из вывода команды `less /var/log/auth.log`, сообщающая об авторизации пользователя *conco 23 мая в 15:49:19*, метод входа *password* ![pt1screen](./screenshots/pt14s1.png)
+- строка из вывода команды `less /var/log/auth.log`, сообщающая об авторизации пользователя *conco 23 мая в 15:49:19*, метод входа *password* <br> ![pt1screen](./screenshots/pt14s1.png)
 
-- фрагмент вывода лога `var/log/syslog` ![pt1screen](./screenshots/pt14s2.png)
+- фрагмент вывода лога `var/log/syslog` <br> ![pt1screen](./screenshots/pt14s2.png)
 
 ## Part 15. Использование планировщика заданий CRON
 
-- фрагмент вывода лога `var/log/syslog`, а также записи во временный файл ![pt1screen](./screenshots/pt15s1.png)
-- задания CRON `crontab -l` до очистки ![pt1screen](./screenshots/pt15s2.png)
-- сообщение об остутствии crontab после очистки ![pt1screen](./screenshots/pt15s3.png)
+- фрагмент вывода лога `var/log/syslog`, а также записи во временный файл <br> ![pt1screen](./screenshots/pt15s1.png)
+- задания CRON `crontab -l` до очистки <br>
+![pt1screen](./screenshots/pt15s2.png)
+- сообщение об остутствии crontab после очистки <br> ![pt1screen](./screenshots/pt15s3.png)
